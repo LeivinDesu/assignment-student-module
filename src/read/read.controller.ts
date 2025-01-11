@@ -12,7 +12,7 @@ export class ReadController {
     return await this.readService.findAll();
   }
 
-  @Get(':id') // GET /read/:id
+  @Get(':id')
   async getStudentById(@Param('id') id: number): Promise<Student> {
     return this.readService.findById(id);
     }
