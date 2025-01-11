@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { CreateModule } from './create/create.module';
 import { ReadModule } from './read/read.module';
 import { UpdateModule } from './update/update.module';
+import { DeleteModule } from './delete/delete.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { UpdateModule } from './update/update.module';
     CreateModule,
     ReadModule,
     UpdateModule,
+    DeleteModule,
   ],
   controllers: [AppController],
   providers: [AppService],
