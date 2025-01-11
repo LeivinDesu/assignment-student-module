@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CreateModule } from './create/create.module';
 
 @Module({
   imports: [
@@ -13,9 +14,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       password: "",
       database: "itec116",
       entities: [__dirname + '/**/*.entity{.ts, .ts}'],
+      autoLoadEntities: true,
       synchronize: true
 
-    })
+    }),
+    CreateModule
 
   ],
   controllers: [AppController],
